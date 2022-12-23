@@ -1,21 +1,14 @@
-/**
- * 
- */
-package com.xworkz.collectionsapp.dec22;
+
+package com.xworkz.collectionsapp;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 
-/**
- * @author DELL
- *
- */
+
 public class DamsInIndia {
 
-	/**
-	 * @param args
-	 */
+	
 	public static void main(String[] args) {
 		
 		Collection<String> damsInAndraPradesh = new ArrayList();
