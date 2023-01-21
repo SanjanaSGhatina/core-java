@@ -1,0 +1,129 @@
+2.Describe various implementation of the map interface and their use case difference.  
+* The map interface is present in java.util package represents a mapping between a key and a value
+* The Map interface is not a subtype of the Collection interface. Therefore it behaves a bit differently from the rest of the collection types.
+* A map contains unique keys.
+
+3.what is difference between Hashset and Treeset.
+   Hashset:-
+* HashSet stores the elements by using a mechanism called hashing.
+* HashSet contains unique elements only.
+* HashSet allows null value.
+* HashSet class is non synchronized.
+* HashSet doesn't maintain the insertion order.
+
+  Treeset:-
+* TreeSet is one of the most important implementations of the SortedSet interface in Java that uses a Tree for storage.
+* TreeSet provides an implementation of the Set interface that uses a tree for storage.
+* Objects are stored in a sorted and ascending order.
+* Access and retrieval times are quite fast, which makes TreeSet an excellent choice when storing large amounts of sorted information that must be found quickly.
+* Tree set executes sorted sets and is backed by TreeMap.
+
+4.How is Hashmap implemented in java?
+
+5.What is fail fast and fail safe iterator?
+    The Java Collection supports two types of iterators:-
+    -> Fail Fast
+    -> Fail Safe
+* These iterators are very useful in exception handling. 
+
+  Fail Fast -->The Fail fast iterator aborts the operation as soon it exposes failures and stops the entire operation. 
+  Fail Safe --> Fail Safe iterator doesn't abort the operation in case of a failure.
+
+
+6.How to convert string to stream of char.
+ * Conversion Using chars()
+ * The String API has a new method – chars() 
+ * This simple API returns an instance of IntStream from the input String.
+ * String testString = "String";
+   IntStream intStream = testString.chars();
+
+7.Explain spliterator API?
+* Spliterators can be used for traversing the elements of a source one by one. These sources could be an array, a Collection, an IO Channel or a generator function.
+* The Interface Spliterator is included in JDK 8 for taking the advantages of parallelism in addition to sequential traversal. It is designed as a parallel analogue of an iterator.
+* The main functionalities of Spliterator are-
+  -->Splitting the source data	
+  -->Processing the source data
+* Java Interface Spliterator Declaration
+  --> public interface Spliterator<T> 
+
+8.list the string operations with stream?
+* Joining Strings With the Stream API.
+* Splitting Strings With Stream API
+* String Array to Map With Stream API.
+* Testing.
+* Conclusion.
+
+9.What is Spring core?
+* Core (spring-core) is the core of the framework that power features such as Inversion of Control and dependency injection. 
+* Beans (spring-beans) provides Beanfactory, which is a sophisticated implementation of the factory pattern.
+
+10.Explain dependency Injection? how to achieve it?
+* Dependency Injection in Java is a way to achieve Inversion of control (IoC) in our application by moving objects binding from compile time to runtime.
+* We can achieve IoC through Factory Pattern, Template Method Design Pattern, Strategy Pattern and Service Locator pattern too.
+* Dependency injection enables you to turn regular Java classes into managed objects and to inject them into any other managed object. Using dependency injection, your code can declare dependencies on any managed object.
+
+11.how can we inject beans in spring?
+* In Spring Boot, we can use Spring Framework to define our beans and their dependency injection.
+* @ComponentScan annotation is used to find beans and the corresponding injected with @Autowired annotation.
+
+12.Can we have more than one spring configuration files in one project?
+* Yes, in large projects, having multiple Spring configurations increase maintainability and modularity.
+
+13.Explain String Builder and String Buffer?
+   String Buffer:-
+* StringBuffer is synchronized i.e. thread safe. It means two threads can't call the methods of StringBuffer simultaneously.
+* StringBuffer is less efficient than StringBuilder.
+* StringBuffer was introduced in Java 1.0
+
+  String Builder:-
+* StringBuilder is non-synchronized i.e. not thread safe. It means two threads can call the methods of StringBuilder simultaneously.
+* StringBuilder is more efficient than StringBuffer.
+* StringBuilder was introduced in Java 1.5
+
+14.Difference between BeanFactory and ApplicationContext?
+  BeanFactory:-
+* It is a fundamental container that provides the basic functionality for managing beans.
+* It is suitable to build standalone applications.
+* It supports only Singleton and Prototype bean scopes.
+
+  ApplicationContext:-
+* It is an advanced container that extends the BeanFactory that provides all basic functionality and adds some advanced features.
+* It is suitable to build Web applications, integration with AOP modules, ORM and distributed applications.
+* It supports all types of bean scopes such as Singleton, Prototype, Request, Session etc.
+
+15. Explain
+-->Spring AOP
+* Aspect Oriented Programming (AOP) compliments OOPs in the sense that it also provides modularity. But the key unit of modularity is aspect than class.
+* AOP breaks the program logic into distinct parts (called concerns). It is used to increase modularity by cross-cutting concerns.
+
+-->IOC
+* Spring IoC is the mechanism to achieve loose-coupling between Objects dependencies. 
+* To achieve loose coupling and dynamic binding of the objects at runtime, objects dependencies are injected by other assembler objects.
+
+-->POJO
+* POJO is short for Plain old java object, an application implemented in pojo way means the logic resides in POJO with little to no boilerplate code, thus it's very portable.
+* An PoJo application can be ported from Spring to another container with little modification.
+
+-->@Component
+* @Component is an annotation that allows Spring to automatically detect our custom beans.
+
+-->@ComponentScan
+* One of the most important annotations in spring is @ComponentScan which is used along with the @Configuration annotation to specify the packages that we want to be scanned. 
+* @ComponentScan without arguments tells Spring to scan the current package and all of its sub-packages.
+
+-->@Bean
+* @Bean annotation which is applied on a method to specify that it returns a bean to be managed by Spring context. Spring Bean annotation is usually declared in Configuration classes methods. 
+* This annotation is also a part of the spring core framework.
+
+17. What is the use of below mentioned tool.
+--> Maven
+* Maven is chiefly used for Java-based projects, helping to download dependencies, which refers to the libraries or JAR files. The tool helps get the right JAR files for each project as there may be different versions of separate packages.
+
+--> Gradle 
+* Gradle is a build automation tool known for its flexibility to build software. A build automation tool is used to automate the creation of applications. The building process includes compiling, linking, and packaging the code.
+
+-->Tomcat
+* Tomcat is also an open source platform and a matured Java servlet container. This container helps to install various Java enterprise specifications such as websites, API, JavaServer Pages (JSP), Java Servlets.
+
+-->Quarkus
+* Quarkus tailors your application for GraalVM and HotSpot. Amazingly fast boot time, incredibly low RSS memory offering near instant scale up and high density memory utilization in container orchestration platforms like Kubernetes
